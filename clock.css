@@ -1,0 +1,19 @@
+/*body {
+  background-image: url(http://www.wallpaperhd.pk/wp-content/uploads/2015/07/green-coffee-with-green-background.jpg);
+  height: 1000px;
+  width: 1000px;
+}*/
+
+#clock {
+  height: 120px;
+  width: 500px;
+  position: absolute;
+  display: inline;
+  margin: 200px;
+  text-align: center;
+  color: teal;
+  font-size: 100px;
+  border: 2px solid gray;
+  border-radius: 20px;
+  padding: 20px;
+}

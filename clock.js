@@ -3,28 +3,38 @@ setInterval(function() {
   //setting a date variable
 var theTime = new Date();
   //setting the hours, min, & sec for the currentTime var
-var theHours = theTime.getHours();
-var theMinutes = theTime.getMinutes();
-var theSeconds = theTime.getSeconds();
+var hour = theTime.getHours();
+var min = theTime.getMinutes();
+var sec = theTime.getSeconds();
+// adding a zero to the min and sec
+if (hour <= 9)hour = '0'+hour;
+if (min <= 9)min = '0'+min;
+if (sec <= 9)sec = '0'+sec;
+// changing the background image based on hours
+if (hour < 16) {
+  document.getElementById("img").style.backgroundImage = "url('day.jpg')";
+  }
+  else if (hour<20) {
+    document.getElementById("img").style.backgroundImage = "url('sunset.jpg')"
+  }
+  else (hour<5)
+    document.getElementById("img").style.backgroundImage = "url('night.jpg')"
+
+
 
 //tell js where to look in the html
 var clockDiv = document.getElementById("clock")
   //console.log(setInterval)
-
 //div needs to read the vars in hhmmss format by changing the innertext
-clockDiv.innerText = theHours + ":" + theMinutes + ":" + theSeconds
-// })
-//calling the function
-// showTime();
-// console.log(showTime)
+clockDiv.innerText = hour + ":" + min + ":" + sec
+})
+
+
 
 
 // setInterval (showTime),1000;
 
-if(theHours <= 9) theHours = "0" + theHours;
-if(theMinutes <= 9) theMinutes = "0" + theMinutes;
-if(theSeconds <= 9) theSeconds = "0" + theSeconds;
-})
+
 // var theMinutes
 //   if (theMinutes<10) {
 //      theMinutes = '0' + theMinutes;
